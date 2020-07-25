@@ -150,11 +150,14 @@ function computeAnswer(elements) {
             if (currentDirectory == "~") {
                 return "";
             } else {
-                let oldDir = currentDirectory
-                currentDirectory = currentDirectoryPretty.split(
-                    "/"
-                )[(currentDirectoryPretty.split("/").length - 2)]
-                currentDirectoryPretty = currentDirectoryPretty.slice(0, currentDirectoryPretty.length - oldDir.length - 1)
+                let oldDir = currentDirectory;
+                currentDirectory = currentDirectoryPretty.split("/")[
+                    currentDirectoryPretty.split("/").length - 2
+                ];
+                currentDirectoryPretty = currentDirectoryPretty.slice(
+                    0,
+                    currentDirectoryPretty.length - oldDir.length - 1
+                );
                 return "";
             }
         }
