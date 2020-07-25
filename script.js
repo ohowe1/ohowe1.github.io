@@ -32,6 +32,9 @@ document.onkeypress = function (e) {
         if (e.keyCode == 13) {
             return;
         }
+        if (e.keyCode == 8) {
+            return;
+        }
 
         input.innerHTML = input.innerHTML.slice(0, input.innerHTML.length - 1);
         input.innerHTML += e.key;
