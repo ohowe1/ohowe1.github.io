@@ -144,8 +144,22 @@ function computeAnswer(elements) {
             files[currentDirectory].join(" ")
         );
     } else if (elements[0] == "cd") {
+        if (elements[1] == ".") {
+            return "";
+        } else if (elements[1] == "..") {
+            if (currentDirectory == "~") {
+                return "";
+            } else {
+                let oldDir = currentDirectory
+                currentDirectory = currentDirectoryPretty.split(
+                    "/"
+                )[(currentDirectoryPretty.split("/").length - 2)]
+                currentDirectoryPretty = currentDirectoryPretty.slice(0, currentDirectoryPretty.length - oldDir.length - 1)
+                return "";
+            }
+        }
         if (folders[currentDirectory].includes(elements[1])) {
-            currentDirectoryPretty = currentDirectory + "/" + elements[1];
+            currentDirectoryPretty = currentDirectoryPretty + "/" + elements[1];
             currentDirectory = elements[1];
             return "";
         } else {
