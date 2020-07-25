@@ -1,0 +1,33 @@
+.question {
+    color: white;
+}
+
+.element {
+    margin-bottom: 0;
+    line-height: 1;
+    width: max-content;
+}
+
+.header {
+    color: lime;
+}
+
+.input {
+    
+}
+
+.response {
+    text-decoration: none;
+    color: blue;
+    margin-top: 10px;
+}
+
+a.response:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: black;
+    font-family: monospace;
+    font-size: 20px;
+}
