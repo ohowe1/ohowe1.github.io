@@ -13,6 +13,7 @@ var answers = {
 };
 var folders = {
     "~": ["Desktop", "Documents", "Downloads", "Pictures", "Videos"],
+    Downloads: [],
     Desktop: [],
     Documents: ["Programming"],
     Pictures: [],
@@ -23,6 +24,7 @@ var folders = {
 var files = {
     "~": [],
     Desktop: ["'Visual Studio Code.lnk'", "Firefox.lnk"],
+    Downloads: ["openme.exe"],
     Documents: [],
     Pictures: ["moon.jpg", "earth.jpg"],
     Videos: [],
@@ -127,7 +129,13 @@ function addNewInput() {
 }
 
 function computeAnswer(elements) {
+    if (elements.length == 0) {
+        return "";
+    }
     if (elements[0] == "echo") {
+        if (elements.length == 1) {
+            return "";
+        }
         if (elements[1].startsWith('"$') && elements[1].endsWith('"')) {
             if (elements[1].slice(2, elements[1].length - 1) in answers) {
                 return answers[elements[1].slice(2, elements[1].length - 1)];
@@ -144,6 +152,9 @@ function computeAnswer(elements) {
             files[currentDirectory].join(" ")
         );
     } else if (elements[0] == "cd") {
+        if (elements.length == 1) {
+            return "";
+        }
         if (elements[1] == ".") {
             return "";
         } else if (elements[1] == "..") {
@@ -171,6 +182,11 @@ function computeAnswer(elements) {
             }
             return "cd: " + elements[1] + ": No such file or directory";
         }
+    } else if (elements[0] == "cls" || elements[0] == "clear") {
+        document.body.innerHTML = "";
+        return "";
+    } else if (elements[0] == "exit") {
+        return "<em>Pretend like this just closed your tab</em>";
     } else {
         return elements[0] + ": command not found";
     }
