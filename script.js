@@ -45,6 +45,7 @@ window.onload = async function () {
         let answer = elements[i].getElementsByClassName("response")[0];
         if (question.id == "404") {
             question.innerHTML += " " + window.location.href
+            console.log('Added')
         }
         let text = question.innerHTML;
         question.innerHTML =
