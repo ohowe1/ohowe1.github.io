@@ -1,3 +1,5 @@
+console.log('Hello world');
+
 const speed = 50;
 const echo = /echo/g;
 var isDone = false;
