@@ -10,6 +10,7 @@ var answers = {
     GITHUB: "https://github.com/carelesshippo",
     SPIGOTMC: "https://spigotmc.org/members/ohowe12.915617",
     CONTACT: "Discord -> careless#1546",
+    PROJECTS: "<a href=\"https://github.com/carelesshippo/SpectatorModeRewrite\">Spectator Mode</a>"
 };
 var folders = {
     "~": ["Desktop", "Documents", "Downloads", "Pictures", "Videos"],
@@ -40,6 +41,9 @@ window.onload = async function () {
     for (let i = 0; i < elements.length; i++) {
         let question = elements[i].getElementsByClassName("question")[0];
         let answer = elements[i].getElementsByClassName("response")[0];
+        if (question.id == "404") {
+            question.innerHTML += " " + window.location.href
+        }
         let text = question.innerHTML;
         question.innerHTML =
             "<span class='header'>Oliver@CarelessHippo:" +
