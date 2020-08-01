@@ -76,7 +76,7 @@ window.onload = async function () {
 
 document.onkeypress = function (e) {
     if (isDone) {
-        if (e.keyCode == 8) {
+        if (e.key == "Backspace") {
             return;
         }
         if (e.keyCode == 13) {
