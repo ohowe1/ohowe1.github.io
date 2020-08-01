@@ -76,6 +76,9 @@ window.onload = async function () {
 
 document.onkeypress = function (e) {
     if (isDone) {
+        if (e.keyCode == 8) {
+            return;
+        }
         if (e.keyCode == 13) {
             currentInput.innerHTML = currentInput.innerHTML.slice(
                 0,
