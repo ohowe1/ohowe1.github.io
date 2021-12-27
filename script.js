@@ -1,5 +1,3 @@
-console.log('Hello world');
-
 const speed = 50;
 const echo = /echo/g;
 var isDone = false;
@@ -12,7 +10,6 @@ var answers = {
     GITHUB: "https://github.com/carelesshippo",
     SPIGOTMC: "https://spigotmc.org/members/ohowe12.915617",
     CONTACT: "Discord -> careless#1546",
-    PROJECTS: "<a href=\"https://github.com/carelesshippo/SpectatorModeRewrite\">Spectator Mode</a>"
 };
 var folders = {
     "~": ["Desktop", "Documents", "Downloads", "Pictures", "Videos"],
@@ -45,7 +42,6 @@ window.onload = async function () {
         let answer = elements[i].getElementsByClassName("response")[0];
         if (question.id == "404") {
             question.innerHTML += " " + window.location.href
-            console.log('Added')
         }
         let text = question.innerHTML;
         question.innerHTML =
@@ -136,6 +132,7 @@ function addNewInput() {
         "$ </span>&#9646;";
     currentInput.style.display = "block";
     currentDiv.appendChild(currentInput);
+    window.scrollBy(0, window.innerHeight);
 }
 
 function computeAnswer(elements) {
