@@ -8,8 +8,8 @@ var answers = {
     EDITOR: "VS Code",
     NAME: "Oliver Howe",
     GITHUB: "https://github.com/carelesshippo",
-    SPIGOTMC: "https://spigotmc.org/members/ohowe12.915617",
-    CONTACT: "Discord -> careless#1546",
+    EMAIL: "ohowe@protonmail.com",
+    CONTACT: "Email -> ohowe@protonmail.com | Discord -> careless#1546",
 };
 var folders = {
     "~": ["Desktop", "Documents", "Downloads", "Pictures", "Videos"],
