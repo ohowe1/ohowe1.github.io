@@ -7,9 +7,9 @@ var answers = {
     USER: "Oliver",
     EDITOR: "VS Code",
     NAME: "Oliver Howe",
-    GITHUB: "https://github.com/carelesshippo",
+    GITHUB: "https://github.com/ohowe1",
     EMAIL: "ohowe@protonmail.com",
-    CONTACT: "Email -> ohowe@protonmail.com | Discord -> careless#1546",
+    CONTACT: "Email -> ohowe@protonmail.com | Discord -> ohowe#1546",
 };
 var folders = {
     "~": ["Desktop", "Documents", "Downloads", "Pictures", "Videos"],
@@ -18,8 +18,8 @@ var folders = {
     Documents: ["Programming"],
     Pictures: [],
     Videos: [],
-    Programming: ["carelesshippo.github.io"],
-    "carelesshippo.github.io": [],
+    Programming: ["ohowe1.github.io"],
+    "ohowe1.github.io": [],
 };
 var files = {
     "~": [],
@@ -29,7 +29,7 @@ var files = {
     Pictures: ["moon.jpg", "earth.jpg"],
     Videos: [],
     Programming: [],
-    "carelesshippo.github.io": ["script.js", "index.html", "style.css"],
+    "ohowe1.github.io": ["script.js", "index.html", "style.css"],
 };
 
 var currentDirectory = "~";
@@ -45,7 +45,7 @@ window.onload = async function () {
         }
         let text = question.innerHTML;
         question.innerHTML =
-            "<span class='header'>Oliver@CarelessHippo:" +
+            "<span class='header'>Oliver@ohowe1:" +
             currentDirectoryPretty +
             "$</span>  ";
         question.style.display = "block";
@@ -85,7 +85,7 @@ document.onkeypress = function (e) {
                     currentInput.innerHTML
                         .slice(
                             (
-                                "<span class='header'>Oliver@CarelessHippo:" +
+                                "<span class='header'>Oliver@ohowe1:" +
                                 currentDirectoryPretty +
                                 "$ </span>"
                             ).length
@@ -127,7 +127,7 @@ function addNewInput() {
     currentInput.className += "question ";
     currentInput.className += "input ";
     currentInput.innerHTML =
-        "<span class='header'>Oliver@CarelessHippo:" +
+        "<span class='header'>Oliver@ohowe1:" +
         currentDirectoryPretty +
         "$ </span>&#9646;";
     currentInput.style.display = "block";
