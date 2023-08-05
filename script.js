@@ -193,7 +193,8 @@ function computeAnswer(elements) {
         document.body.innerHTML = "";
         return "";
     } else if (elements[0] == "exit") {
-        return "<em>Pretend like this just closed your tab</em>";
+        window.close()
+        return "Bye!";
     } else {
         return elements[0] + ": command not found";
     }
