@@ -1,3 +1,3 @@
-# ohowe1.github.io
+# sites.olihowe.com
 
-My main github page
+the home page of my "sites" website. it is sort of the table of contents of websites for random projects
